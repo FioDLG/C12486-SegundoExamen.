@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="GestorDeMembresia/GestorDeMembresia.csproj" />
+  <Project Path="GestorDeMembresia.API/GestorDeMembresia.API.csproj" />
+  <Project Path="GestorDeMembresia.BL/GestorDeMembresia.BL.csproj" />
+  <Project Path="GestorDeMembresia.DA/GestorDeMembresia.DA.csproj" />
+  <Project Path="GestorDeMembresia.Model/GestorDeMembresia.Model.csproj" />
+  <Project Path="GestorDeMembresia/GestorDeMembresia.UI.csproj" />
 </Solution>
