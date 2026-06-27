@@ -1,0 +1,56 @@
+﻿@model GestorDeMembresia.UI.Services.MembresiaDto
+
+@{
+    ViewData["Title"] = "Detalle de Membresía";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-info text-white text-center">
+            <h4>Detalle de Membresía</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Identificación</dt>
+                <dd class="col-sm-9">@Model.Identificacion</dd>
+
+                <dt class="col-sm-3">Nombre</dt>
+                <dd class="col-sm-9">@Model.Nombre</dd>
+
+                <dt class="col-sm-3">Apellidos</dt>
+                <dd class="col-sm-9">@Model.Apellidos</dd>
+
+                <dt class="col-sm-3">Teléfono</dt>
+                <dd class="col-sm-9">@Model.Telefono</dd>
+
+                <dt class="col-sm-3">Tipo de Plan</dt>
+                <dd class="col-sm-9">@Model.TipoDePlan</dd>
+
+                <dt class="col-sm-3">Fecha Inicio</dt>
+                <dd class="col-sm-9">@Model.FechaDeInicio.ToShortDateString()</dd>
+
+                <dt class="col-sm-3">Fecha Vencimiento</dt>
+                <dd class="col-sm-9">@Model.FechaDeVencimiento.ToShortDateString()</dd>
+
+                <dt class="col-sm-3">Estado</dt>
+                <dd class="col-sm-9">
+                    @if (Model.Estado == 1)
+                    {
+                        <span class="badge bg-success">Activa</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Vencida</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3">Monto Total</dt>
+                <dd class="col-sm-9">₡@Model.MontoTotal</dd>
+            </dl>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Index" class="btn btn-secondary">Volver al listado</a>
+        </div>
+    </div>
+</div>
+

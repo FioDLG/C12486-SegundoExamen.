@@ -1,0 +1,59 @@
+﻿@model GestorDeMembresia.UI.Services.MembresiaDto
+
+@{
+    ViewData["Title"] = "Editar Membresía";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-warning text-dark text-center">
+            <h4>Editar Membresía</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Editar" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Identificación</label>
+                    <input asp-for="Identificacion" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellidos</label>
+                    <input asp-for="Apellidos" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Teléfono</label>
+                    <input asp-for="Telefono" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Plan</label>
+                    <input asp-for="TipoDePlan" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha Inicio</label>
+                    <input asp-for="FechaDeInicio" type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha Vencimiento</label>
+                    <input asp-for="FechaDeVencimiento" type="date" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Estado</label>
+                    <select asp-for="Estado" class="form-select">
+                        <option value="1">Activa</option>
+                        <option value="2">Vencida</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Monto Total</label>
+                    <input asp-for="MontoTotal" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
